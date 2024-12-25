@@ -46,6 +46,17 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
 };
 
 const Home: React.FC = () => {
+  const imageGrid = [
+    '/astro.jpg',
+    '/EcoCar-zack.jpg',
+    '/iarc_flying.jpg',
+    '/iarc.png',
+    '/kalman-birds-eye.jpg',
+    '/sim-pic.jpg',
+    '/graymatter-side.jpg',
+    '/graymatter-front.png',
+  ];
+
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative' }}>
       <header style={{ backgroundColor: '#0070f3', padding: '20px', color: '#fff', borderRadius: '10px', marginBottom: '30px' }}>
@@ -55,12 +66,26 @@ const Home: React.FC = () => {
       <main>
         <section>
           <p style={{ fontSize: '1.5em', color: '#333', marginBottom: '20px' }}>Amazon Lab126 Astro and Beyond!</p>
-          <img src="/astro.jpg" alt="Astro" style={{ maxWidth: '25%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', justifyContent: 'center' }}>
+            {imageGrid.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Image ${index + 1}`}
+                style={{
+                  maxWidth: '50%',
+                  height: 'auto',
+                  borderRadius: '10px',
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                }}
+              />
+            ))}
+          </div>
         </section>
       </main>
       <footer style={{ marginTop: '50px', fontSize: '0.9em', color: '#666', position: 'relative', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
         <section style={{ textAlign: 'left' }}>
-          <h2 style={{ fontSize: '1.5em', color: '#0070f3', marginBottom: '10px' }}>Passion Projects</h2>
+          <h2 style={{ fontSize: '1.5em', color: '#0070f3', marginBottom: '10px' }}>Articles</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (
               <li key={article.title} style={{ marginBottom: '10px' }}>
