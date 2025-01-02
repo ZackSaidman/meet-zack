@@ -37,7 +37,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
       <img
         src={image}
         alt={alt}
-        style={{ maxWidth: '50px', height: '50px', transition: 'transform 0.2s', cursor: 'pointer' }}
+        style={{ maxWidth: '3vw', height: 'auto', transition: 'transform 0.2s', cursor: 'pointer' }}
         onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
         onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
@@ -58,37 +58,59 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative' }}>
-      <header style={{ backgroundColor: '#0070f3', padding: '20px', color: '#fff', borderRadius: '10px', marginBottom: '30px' }}>
-        <h1 style={{ fontSize: '3em', margin: '0' }}>Zachary Saidman</h1>
-        <p style={{ fontSize: '1.5em', margin: '10px 0 0' }}>Mechanical Engineer turned Software Developer</p>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '2vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
+      <header style={{ backgroundColor: '#0070f3', padding: '1vh', color: '#fff', borderRadius: '10px', marginBottom: '2vh' }}>
+        <h1 style={{ fontSize: '2.5vw', margin: '0' }}>Zachary Saidman</h1>
+        <p style={{ fontSize: '1.5vw', margin: '1vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
       </header>
-      <main>
-        <section>
-          <p style={{ fontSize: '1.5em', color: '#333', marginBottom: '20px' }}>Amazon Lab126 Astro and Beyond!</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', justifyContent: 'center' }}>
+      <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
+        <section style={{ marginBottom: '2vh' }}>
+          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '2vh' }}>Amazon Lab126 Astro and Beyond!</p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '1vw',
+              maxWidth: '90vw',
+              margin: '0 auto',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             {imageGrid.map((src, index) => (
-              <img
+              <div
                 key={index}
-                src={src}
-                alt={`Image ${index + 1}`}
                 style={{
-                  maxWidth: '50%',
-                  height: 'auto',
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                  width: '100%',
+                  paddingBottom: '100%',
+                  position: 'relative',
                 }}
-              />
+              >
+                <img
+                  src={src}
+                  alt={`Image ${index + 1}`}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '10px',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                  }}
+                />
+              </div>
             ))}
           </div>
         </section>
       </main>
-      <footer style={{ marginTop: '50px', fontSize: '0.9em', color: '#666', position: 'relative', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
+      <footer style={{ fontSize: '0.8vw', color: '#666', position: 'absolute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
         <section style={{ textAlign: 'left' }}>
-          <h2 style={{ fontSize: '1.5em', color: '#0070f3', marginBottom: '10px' }}>Articles</h2>
+          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh' }}>Articles</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (
-              <li key={article.title} style={{ marginBottom: '10px' }}>
+              <li key={article.title} style={{ marginBottom: '1vh' }}>
                 <Link href={article.url} target="_blank" style={{ textDecoration: 'none', color: '#0070f3' }}>
                   {article.title}
                 </Link>
@@ -97,15 +119,15 @@ const Home: React.FC = () => {
           </ul>
         </section>
         <section style={{ textAlign: 'right' }}>
-          <h2 style={{ fontSize: '1.5em', color: '#0070f3', marginBottom: '10px' }}>Connect with Me</h2>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh', marginRight: '3vh' }}>Connect with Me</h2>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1vw', marginRight: '3vh' }}>
             {socials.map((social) => (
               <SocialIcon key={social.name} url={social.url} image={social.image} alt={social.name} />
             ))}
           </div>
         </section>
       </footer>
-      <p style={{ textAlign: 'center', marginTop: '20px', color: '#666' }}>© {new Date().getFullYear()} Zachary Saidman. All rights reserved.</p>
+      <p style={{ textAlign: 'center', marginTop: '2vh', color: '#666', position: 'absolute', bottom: '1vh', width: '100%' }}>© {new Date().getFullYear()} Zachary Saidman. All rights reserved.</p>
     </div>
   );
 };
