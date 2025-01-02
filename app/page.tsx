@@ -58,19 +58,19 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '2vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '1vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
       <header style={{ backgroundColor: '#0070f3', padding: '1vh', color: '#fff', borderRadius: '10px', marginBottom: '2vh' }}>
         <h1 style={{ fontSize: '2.5vw', margin: '0' }}>Zachary Saidman</h1>
-        <p style={{ fontSize: '1.5vw', margin: '1vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
+        <p style={{ fontSize: '1vw', margin: '0vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
       </header>
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
         <section style={{ marginBottom: '2vh' }}>
-          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '2vh' }}>Amazon Lab126 Astro and Beyond!</p>
+          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Amazon Lab126 Astro and Beyond!</p>
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '1vw',
+              gap: '0.5vw',
               maxWidth: '90vw',
               margin: '0 auto',
               justifyContent: 'center',
