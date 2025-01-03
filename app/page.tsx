@@ -62,6 +62,29 @@ const Home: React.FC = () => {
       <header style={{ backgroundColor: '#0070f3', padding: '1vh', color: '#fff', borderRadius: '10px', marginBottom: '2vh' }}>
         <h1 style={{ fontSize: '2.5vw', margin: '0' }}>Zachary Saidman</h1>
         <p style={{ fontSize: '1vw', margin: '0vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
+        <Link href='/about'>
+          <button
+            style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: '2vh',
+              marginTop: '-5vh',
+              marginBottom: '1vh',
+              padding: '1vh 2vw',
+              fontSize: '1vw',
+              backgroundColor: '#fff',
+              color: '#0070f3',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              transition: 'transform 0.2s',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          >
+            About Me
+          </button>
+        </Link>
       </header>
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
         <section style={{ marginBottom: '2vh' }}>
@@ -107,7 +130,7 @@ const Home: React.FC = () => {
       </main>
       <footer style={{ fontSize: '0.8vw', color: '#666', position: 'absolute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
         <section style={{ textAlign: 'left' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh' }}>Articles</h2>
+          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh' }}>Articles I'm In</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (
               <li key={article.title} style={{ marginBottom: '1vh' }}>
@@ -119,7 +142,7 @@ const Home: React.FC = () => {
           </ul>
         </section>
         <section style={{ textAlign: 'right' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh', marginRight: '3vh' }}>Connect with Me</h2>
+          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh', marginRight: '3vh' }}>Let's Connect</h2>
           <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1vw', marginRight: '3vh' }}>
             {socials.map((social) => (
               <SocialIcon key={social.name} url={social.url} image={social.image} alt={social.name} />
