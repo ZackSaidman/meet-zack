@@ -4,6 +4,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+const left_margin = '20%'
+
 const Resume = () => {
   return (
     <>
@@ -14,7 +16,7 @@ const Resume = () => {
       </Head>
       <main className="container mx-auto px-4 py-8">
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold">Zachary Saidman</h1>
+          <h1 className="text-4xl font-bold">About Me</h1>
           <br></br>
           <Link href='/'>
                 <button
@@ -41,7 +43,25 @@ const Resume = () => {
             </Link>
         </header>
 
-        <section className="mb-8">
+        <section className="mb-8" style={{ marginLeft: left_margin }}>
+          <div className="mb-6">
+            <p className="text-gray-600">Hey! I'm excited about robotics and new consumer devices</p>
+            <p className="text-gray-600">I'm experienced in embedded linux, devices software, build systems, prototyping, and simulation</p>
+          </div>
+        </section>
+
+        <section className="mb-8" style={{ marginLeft: left_margin }}>
+          <div className="mb-6">
+            <img
+                src="/EcoCar-zack.jpg"
+                style={{
+                  width: '60%',
+                }}
+            />
+          </div>
+        </section>
+
+        <section className="mb-8" style={{ marginLeft: left_margin }}>
           <h2 className="text-2xl font-semibold mb-4">Professional Experience</h2>
           <div className="mb-6">
             <h3 className="text-l font-bold">Software Development Engineer</h3>
@@ -64,7 +84,7 @@ const Resume = () => {
           </div>
         </section>
 
-        <section className="mb-8">
+        <section className="mb-8" style={{ marginLeft: left_margin }}>
           <h2 className="text-2xl font-semibold mb-4">Education</h2>
           <div className="mb-6">
             <h3 className="text-l font-bold">Bachelor Of Science in Mechanical Engineering Concentrated in Robotic Systems</h3>
@@ -73,7 +93,7 @@ const Resume = () => {
           </div>
         </section>
 
-        <section className="mb-8">
+        <section className="mb-8" style={{ marginLeft: left_margin }}>
           <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
           <ul>
             <li>Email: <a href="mailto:zachary.saidman@gmail.com" className="text-blue-500">zachary.saidman@gmail.com</a></li>
