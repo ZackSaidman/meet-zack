@@ -53,7 +53,6 @@ const Home: React.FC = () => {
     '/kalman-birds-eye.jpg',
     '/sim-pic.jpg',
     '/graymatter-side.jpg',
-    '/graymatter-front.png',
   ];
 
   return (
