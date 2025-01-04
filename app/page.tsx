@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       </main>
       <footer style={{ fontSize: '0.8vw', color: '#666', position: 'absolute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
         <section style={{ textAlign: 'left' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh' }}>Articles I'm In</h2>
+          <h2 style={{ fontSize: '1.5vw', color: '#0070f3', marginBottom: '1vh' }}>Articles Mentioning Me</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (
               <li key={article.title} style={{ marginBottom: '1vh' }}>
