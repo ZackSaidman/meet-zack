@@ -48,7 +48,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
 const Home: React.FC = () => {
   const imageGrid = [
     '/astro.png',
-    '/iarc_flying.jpg',
+    '/iarc-flying.jpg',
     '/iarc.png',
     '/kalman-birds-eye.jpg',
     '/sim-pic.jpg',
