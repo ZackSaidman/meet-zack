@@ -21,8 +21,8 @@ const Resume = () => {
                     style={{
                     display: 'block',
                     marginLeft: 'auto',
-                    marginRight: '2vh',
-                    marginTop: '-5vh',
+                    marginRight: '-15vh',
+                    marginTop: '-2vh',
                     marginBottom: '1vh',
                     padding: '1vh 2vw',
                     fontSize: '1vw',
