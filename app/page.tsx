@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { ImageGrid } from './image_hover/ImageHoverGrid';
 
 type Social = {
   name: string;
@@ -46,14 +47,6 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
 };
 
 const Home: React.FC = () => {
-  const imageGrid = [
-    '/astro.png',
-    '/iarc-flying.jpg',
-    '/iarc.png',
-    '/kalman-birds-eye.jpg',
-    '/sim-pic.jpg',
-    '/graymatter-side.jpg',
-  ];
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '1vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
@@ -98,7 +91,7 @@ const Home: React.FC = () => {
               alignItems: 'center',
             }}
           >
-            {imageGrid.map((src, index) => (
+            {ImageGrid.map((src, index) => (
               <div
                 key={index}
                 style={{
@@ -107,20 +100,7 @@ const Home: React.FC = () => {
                   position: 'relative',
                 }}
               >
-                <img
-                  src={src}
-                  alt={`Image ${index + 1}`}
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain',
-                    borderRadius: '10px',
-                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                  }}
-                />
+                {src}
               </div>
             ))}
           </div>
