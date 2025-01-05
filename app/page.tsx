@@ -83,7 +83,7 @@ const Home: React.FC = () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))',
               gap: '0.5vw',
               maxWidth: '90vw',
               margin: '0 auto',

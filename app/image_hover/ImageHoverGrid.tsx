@@ -7,19 +7,14 @@ export const ImageGrid = [
     text="Amazon's Consumer Robot Astro!"
     />,
     <ImageHover 
-    src='/iarc-flying.jpg'
-    alt='IARC Drone'
-    text='IARC Drone Hearding a Roomba'
+    src='/kalman-birds-eye.jpg'
+    alt='Sensor Fusion Map'
+    text='Sensor fusion algorithm for autonomous vehicles'
     />,
     <ImageHover 
     src='/iarc.png'
     alt='IARC Drone'
-    text='IARC Drone'
-    />,
-    <ImageHover 
-    src='/kalman-birds-eye.jpg'
-    alt='Sensor Fusion Map'
-    text='Sensor fusion algorithm for autonomous vehicles'
+    text='Internation Aerial Robotics Compentition'
     />,
     <ImageHover 
     src='/sim-pic.jpg'
