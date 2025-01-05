@@ -53,7 +53,7 @@ const Resume = () => {
         <section className="mb-8" style={{ marginLeft: left_margin }}>
           <div className="mb-6">
             <img
-                src="/EcoCar-zack.jpg"
+                src="/EcoCar-zack.webp"
                 style={{
                   width: '60%',
                 }}
