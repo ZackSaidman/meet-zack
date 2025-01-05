@@ -45,8 +45,8 @@ const Resume = () => {
 
         <section className="mb-8" style={{ marginLeft: left_margin }}>
           <div className="mb-6">
-            <p className="text-gray-600">Hey! I'm excited about robotics and new consumer devices</p>
-            <p className="text-gray-600">I'm experienced in embedded linux, devices software, build systems, prototyping, and simulation</p>
+            <p className="text-gray-600">Hey! I&pos;m excited about robotics and new consumer devices</p>
+            <p className="text-gray-600">I&pos;m experienced in embedded linux, devices software, build systems, prototyping, and simulation</p>
           </div>
         </section>
 

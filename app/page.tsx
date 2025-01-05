@@ -120,7 +120,7 @@ const Home: React.FC = () => {
           </ul>
         </section>
         <section style={{ textAlign: 'right' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh', marginRight: '3vh' }}>Let's Connect</h2>
+          <h2 style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh', marginRight: '3vh' }}>Let&pos;s Connect</h2>
           <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1vw', marginRight: '3vh' }}>
             {socials.map((social) => (
               <SocialIcon key={social.name} url={social.url} image={social.image} alt={social.name} />
