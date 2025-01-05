@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ImageGrid } from '../src/image_hover/ImageHoverGrid';
-import Head from 'next/head';
 
 type Social = {
   name: string;
