@@ -9,11 +9,7 @@ const left_margin = '20%'
 const Resume = () => {
   return (
     <>
-      <Head>
-        <title>My Resume</title>
-        <meta name="description" content="Professional resume of Zachary Saidman." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <title>Zachary Saidman</title>
       <main className="container mx-auto px-4 py-8">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold">About Me</h1>

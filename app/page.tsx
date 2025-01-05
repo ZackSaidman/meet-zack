@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ImageGrid } from '../src/image_hover/ImageHoverGrid';
+import Head from 'next/head';
 
 type Social = {
   name: string;
@@ -50,6 +51,7 @@ const Home: React.FC = () => {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '1vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
+      <title>Zachary Saidman</title>
       <header style={{ backgroundColor: '#0070f3', padding: '1vh', color: '#fff', borderRadius: '10px', marginBottom: '2vh' }}>
         <h1 style={{ fontSize: '2.5vw', margin: '0' }}>Zachary Saidman</h1>
         <p style={{ fontSize: '1vw', margin: '0vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
