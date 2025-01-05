@@ -20,25 +20,25 @@ const Resume = () => {
           <br></br>
           <Link href='/'>
             <button
-                style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: '-15vh',
-                marginTop: '-2vh',
-                marginBottom: '1vh',
-                padding: '1vh 2vw',
-                fontSize: '1vw',
-                backgroundColor: '#0070f3',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer',
-                transition: 'transform 0.2s',
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
-                onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: '-15vh',
+              marginTop: '-2vh',
+              marginBottom: '1vh',
+              padding: '1vh 2vw',
+              fontSize: '1vw',
+              backgroundColor: '#0070f3',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              transition: 'transform 0.2s',
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+              onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
-                Home
+              Home
             </button>
           </Link>
         </header>
@@ -53,10 +53,10 @@ const Resume = () => {
         <section className="mb-8" style={{ marginLeft: left_margin }}>
           <div className="mb-6">
             <img
-                src="/EcoCar-zack.webp"
-                style={{
-                  width: '60%',
-                }}
+              src="/EcoCar-zack.webp"
+              style={{
+                width: '60%',
+              }}
             />
           </div>
         </section>
