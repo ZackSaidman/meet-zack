@@ -79,7 +79,7 @@ const Home: React.FC = () => {
       </header>
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
         <section style={{ marginBottom: '2vh' }}>
-          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Amazon Lab126 Astro and Beyond!</p>
+          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Professional Typer and Robotics Enthusiast</p>
           <div
             style={{
               display: 'grid',
