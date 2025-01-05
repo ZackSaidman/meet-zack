@@ -15,7 +15,7 @@ export const ImageGrid = [
     />,
     <ImageHover 
         key="iarc-drone"
-        src="/iarc.webp"
+        src="/iarc.png"
         alt="IARC Drone"
         text="International Aerial Robotics Competition"
     />,
