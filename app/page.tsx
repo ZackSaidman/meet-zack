@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ImageGrid } from '../src/image_hover/ImageHoverGrid';
+import { useRouter } from 'next/navigation';
 
 type Social = {
   name: string;
@@ -47,6 +48,11 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
 };
 
 const Home: React.FC = () => {
+  const router = useRouter();
+
+  const handleRoute = (route: string) => {
+    router.push(route);
+  };
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '1vh', textAlign: 'center', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
@@ -54,29 +60,28 @@ const Home: React.FC = () => {
       <header style={{ backgroundColor: '#0070f3', padding: '1vh', color: '#fff', borderRadius: '10px', marginBottom: '2vh' }}>
         <h1 style={{ fontSize: '2.5vw', margin: '0' }}>Zachary Saidman</h1>
         <p style={{ fontSize: '1vw', margin: '0vh 0 0' }}>Mechanical Engineer turned Software Developer</p>
-        <Link href='/about'>
-          <button
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: '2vh',
-              marginTop: '-5vh',
-              marginBottom: '1vh',
-              padding: '1vh 2vw',
-              fontSize: '1vw',
-              backgroundColor: '#fff',
-              color: '#0070f3',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              transition: 'transform 0.2s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-          >
-            About Me
-          </button>
-        </Link>
+        <button
+          style={{
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: '2vh',
+            marginTop: '-5vh',
+            marginBottom: '1vh',
+            padding: '1vh 2vw',
+            fontSize: '1vw',
+            backgroundColor: '#fff',
+            color: '#0070f3',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            transition: 'transform 0.2s',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+          onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          onClick={() => handleRoute('/about')}
+        >
+          About Me
+        </button>
       </header>
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
         <section style={{ marginBottom: '2vh' }}>

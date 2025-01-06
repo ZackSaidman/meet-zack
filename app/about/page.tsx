@@ -2,10 +2,17 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const left_margin = '20%'
 
 const Resume = () => {
+  const router = useRouter();
+    
+  const handleRoute = (route: string) => {
+    router.push(route);
+  };
+
   return (
     <>
       <title>Zachary Saidman</title>
@@ -13,29 +20,28 @@ const Resume = () => {
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold">About Me</h1>
           <br></br>
-          <Link href='/'>
-            <button
-              style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: '-15vh',
-              marginTop: '-2vh',
-              marginBottom: '1vh',
-              padding: '1vh 2vw',
-              fontSize: '1vw',
-              backgroundColor: '#0070f3',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              transition: 'transform 0.2s',
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
-              onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            >
-              Home
-            </button>
-          </Link>
+          <button
+            style={{
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: '-15vh',
+            marginTop: '-2vh',
+            marginBottom: '1vh',
+            padding: '1vh 2vw',
+            fontSize: '1vw',
+            backgroundColor: '#0070f3',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            transition: 'transform 0.2s',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            onClick={() => handleRoute('/')}
+          >
+            Home
+          </button>
         </header>
 
         <section className="mb-8" style={{ marginLeft: left_margin }}>
