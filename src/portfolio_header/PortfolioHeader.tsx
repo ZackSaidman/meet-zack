@@ -16,9 +16,9 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
   return (
     <header
       style={{
-        backgroundColor: '#0070f3',
+        backgroundColor: '#ffc067',
         padding: '2vh',
-        color: '#fff',
+        color: '#3d1800',
         borderRadius: '10px',
         marginBottom: '2vh',
         display: 'flex',
@@ -52,8 +52,8 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
           style={{
             padding: '1vh 2vw',
             fontSize: 'clamp(8px, 1vw, 2rem)',
-            backgroundColor: '#fff',
-            color: '#0070f3',
+            backgroundColor: '#3d1800',
+            color: '#fff',
             border: 'none',
             borderRadius: '5px',
             cursor: 'pointer',
@@ -70,8 +70,8 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
           style={{
             padding: '1vh 2vw',
             fontSize: 'clamp(8px, 1vw, 2rem)',
-            backgroundColor: '#fff',
-            color: '#0070f3',
+            backgroundColor: '#3d1800',
+            color: '#fff',
             border: 'none',
             borderRadius: '5px',
             cursor: 'pointer',
