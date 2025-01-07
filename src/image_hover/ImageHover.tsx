@@ -14,8 +14,8 @@ const ImageHover: React.FC<ImageHoverProps> = ({ src, alt, text, subtext }) => {
     <div className={styles.imageContainer}>
       <Image src={src} alt={alt} fill className={styles.image} />
       <div className={styles.overlay}>
-        <h1 style={{fontSize: '20px', marginBottom: '20px'}}>{text}</h1>
-        <p style={{fontSize: '1.5vh'}}>{subtext}</p>
+        <h1 style={{fontSize: '20px', marginBottom: '20px', marginLeft: '10px', marginRight: '10px'}}>{text}</h1>
+        <p style={{fontSize: '1.5vh', marginLeft: '10px', marginRight: '10px'}}>{subtext}</p>
       </div>
     </div>
   );
