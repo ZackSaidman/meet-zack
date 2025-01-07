@@ -9,6 +9,7 @@ const Resume = () => {
 
   return (
     <>
+      <div style={{ fontFamily: 'Arial, sans-serif', padding: '1vh', textAlign: 'left', backgroundColor: '#f0f4f8', minHeight: '100vh', position: 'relative', boxSizing: 'border-box', margin: '0', overflow: 'hidden' }}>
       <PortfolioHeader
         title='Zachary Saidman'
         mainText='About Me'
@@ -78,6 +79,7 @@ const Resume = () => {
           <p className="text-gray-600">© {new Date().getFullYear()} Zachary Saidman. All rights reserved.</p>
         </footer>
       </main>
+      </div>
     </>
   );
 };

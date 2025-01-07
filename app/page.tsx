@@ -86,8 +86,8 @@ const Home: React.FC = () => {
           </div>
         </section>
       </main>
-      <footer style={{ fontSize: '0.8vw', color: '#666', position: 'absolute', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
-        <section style={{ textAlign: 'left' }}>
+      <footer style={{ fontSize: '0.8vw', color: '#666', position: 'relative', marginTop: '10vh', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
+        <section style={{ textAlign: 'left', marginLeft: '10vh' }}>
           <h2 style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Articles Mentioning My Passion Projects</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (

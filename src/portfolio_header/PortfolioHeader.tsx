@@ -30,8 +30,12 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
     >
       <title>{ title }</title>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2.5vw', margin: '0' }}>{ mainText }</h1>
-        <p style={{ fontSize: '1vw', margin: '0' }}>{ subText }</p>
+        <h1 style={{ fontSize: '2.5vw', margin: '0' }}>{mainText}</h1>
+        {subText ? (
+          <p style={{ fontSize: '1vw', margin: '0' }}>{subText}</p>
+        ) : (
+          <div style={{ fontSize: '1vw', margin: '0', visibility: 'hidden' }}>Placeholder</div>
+        )}
       </div>
 
       <div
