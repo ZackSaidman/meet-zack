@@ -108,7 +108,7 @@ const Home: React.FC = () => {
           </div>
         </section>
       </footer>
-      <p style={{ textAlign: 'center', marginTop: '2vh', color: '#666', position: 'absolute', bottom: '1vh', width: '100%' }}>© {new Date().getFullYear()} Zachary Saidman. All rights reserved.</p>
+      <p className="text-gray-600">© {new Date().getFullYear()} Zachary Saidman. All rights reserved.</p>
     </div>
   );
 };
