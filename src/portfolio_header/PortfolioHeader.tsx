@@ -30,11 +30,11 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
     >
       <title>{ title }</title>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2.5vw', margin: '0' }}>{mainText}</h1>
+        <h1 style={{ fontSize: 'clamp(30px, 2.5vw, 2rem)', margin: '0' }}>{mainText}</h1>
         {subText ? (
-          <p style={{ fontSize: '1vw', margin: '0' }}>{subText}</p>
+          <p style={{ fontSize: 'clamp(10px, 1vw, 2rem)', margin: '0' }}>{subText}</p>
         ) : (
-          <div style={{ fontSize: '1vw', margin: '0', visibility: 'hidden' }}>Placeholder</div>
+          <div style={{ fontSize: 'clamp(10px, 1vw, 2rem)', margin: '0', visibility: 'hidden' }}>Placeholder</div>
         )}
       </div>
 
@@ -51,7 +51,7 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
         <button
           style={{
             padding: '1vh 2vw',
-            fontSize: '1vw',
+            fontSize: 'clamp(8px, 1vw, 2rem)',
             backgroundColor: '#fff',
             color: '#0070f3',
             border: 'none',
@@ -69,7 +69,7 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
         <button
           style={{
             padding: '1vh 2vw',
-            fontSize: '1vw',
+            fontSize: 'clamp(8px, 1vw, 2rem)',
             backgroundColor: '#fff',
             color: '#0070f3',
             border: 'none',

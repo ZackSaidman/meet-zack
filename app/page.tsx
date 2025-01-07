@@ -39,7 +39,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ url, image, alt }) => {
       <img
         src={image}
         alt={alt}
-        style={{ maxWidth: '3vw', height: 'auto', transition: 'transform 0.2s', cursor: 'pointer' }}
+        style={{ maxWidth: '3vw', minWidth: '40px', height: 'auto', transition: 'transform 0.2s', cursor: 'pointer' }}
         onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
         onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
       />
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
         <section style={{ marginBottom: '2vh' }}>
-          <p style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Professional Typer and Robotics Enthusiast</p>
+          <p style={{ fontSize: 'clamp(16px, 1.5vw, 2rem)', color: '#333', marginBottom: '1vh' }}>Professional Typer and Robotics Enthusiast</p>
           <div
             style={{
               display: 'grid',
@@ -87,11 +87,11 @@ const Home: React.FC = () => {
         </section>
       </main>
       <footer style={{ fontSize: '0.8vw', color: '#666', position: 'relative', marginTop: '10vh', bottom: 0, width: '100%', display: 'flex', justifyContent: 'space-between', padding: '2vh', backgroundColor: '#f0f4f8', boxSizing: 'border-box' }}>
-        <section style={{ textAlign: 'left', marginLeft: '10vh' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh' }}>Articles Mentioning My Passion Projects</h2>
+        <section style={{ textAlign: 'left' }}>
+          <h2 style={{ fontSize: 'clamp(16px, 1.5vw, 2rem)', color: '#333', marginBottom: '1vh' }}>Articles Mentioning My Passion Projects</h2>
           <ul style={{ listStyleType: 'none', padding: '0', color: '#333' }}>
             {articles.map((article) => (
-              <li key={article.title} style={{ marginBottom: '1vh' }}>
+              <li key={article.title} style={{ fontSize: 'clamp(10px, 0.8vw, 2rem)', marginBottom: '1vh' }}>
                 <Link href={article.url} target="_blank" style={{ textDecoration: 'none', color: '#0070f3' }}>
                   {article.title}
                 </Link>
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
           </ul>
         </section>
         <section style={{ textAlign: 'right' }}>
-          <h2 style={{ fontSize: '1.5vw', color: '#333', marginBottom: '1vh', marginRight: '3vh' }}>Let&apos;s Connect</h2>
+          <h2 style={{ fontSize: 'clamp(16px, 1.5vw, 2rem)', color: '#333', marginBottom: '1vh', marginRight: '3vh' }}>Let&apos;s Connect</h2>
           <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1vw', marginRight: '3vh' }}>
             {socials.map((social) => (
               <SocialIcon key={social.name} url={social.url} image={social.image} alt={social.name} />
