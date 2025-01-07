@@ -1,47 +1,19 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import PortfolioHeader from '@/src/portfolio_header/PortfolioHeader';
 
 const left_margin = '20%'
 
 const Resume = () => {
-  const router = useRouter();
-    
-  const handleRoute = (route: string) => {
-    router.push(route);
-  };
 
   return (
     <>
-      <title>Zachary Saidman</title>
+      <PortfolioHeader
+        title='Zachary Saidman'
+        mainText='About Me'
+      />
       <main className="container mx-auto px-4 py-8">
-        <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold">About Me</h1>
-          <br></br>
-          <button
-            style={{
-            display: 'block',
-            marginLeft: 'auto',
-            marginRight: '-15vh',
-            marginTop: '-2vh',
-            marginBottom: '1vh',
-            padding: '1vh 2vw',
-            fontSize: '1vw',
-            backgroundColor: '#0070f3',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            transition: 'transform 0.2s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            onClick={() => handleRoute('/')}
-          >
-            Home
-          </button>
-        </header>
 
         <section className="mb-8" style={{ marginLeft: left_margin }}>
           <div className="mb-6">
