@@ -30,7 +30,7 @@ const PortfolioHeader: React.FC<PortfolioHeaderProps> = ({title, mainText, subTe
     >
       <title>{ title }</title>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: 'clamp(30px, 2.5vw, 2rem)', margin: '0' }}>{mainText}</h1>
+        <h1 style={{ fontSize: 'clamp(30px, 2.5vw, 3rem)', margin: '0' }}>{mainText}</h1>
         {subText ? (
           <p style={{ fontSize: 'clamp(10px, 1vw, 2rem)', margin: '0' }}>{subText}</p>
         ) : (
